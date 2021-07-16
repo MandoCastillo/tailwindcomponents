@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus } from '../assets/icons/svg';
+import { ArrowLeft, Plus } from '../assets/icons/svg';
 import { useScreen } from '../hooks/useScreen';
 import { Button } from './Button';
 
@@ -30,33 +30,15 @@ export const Sidebar = () => {
           id="mobile-nav"
         >
           <div
-            className="h-10 w-10 bg-gray-800 absolute right-0 mt-16 -mr-10 flex items-center shadow rounded-tr rounded-br justify-center cursor-pointer"
+            className="h-10 w-10 bg-gray-400 absolute z-0 right-0 -mr-5 flex items-center shadow rounded-tr rounded-br justify-center cursor-pointer transform -rotate-45"
             id="mobile-toggler"
             onClick={sidebarHandler}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-adjustments"
-              width={20}
-              height={20}
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="#FFFFFF"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" />
-              <circle cx={6} cy={10} r={2} />
-              <line x1={6} y1={4} x2={6} y2={8} />
-              <line x1={6} y1={12} x2={6} y2={20} />
-              <circle cx={12} cy={16} r={2} />
-              <line x1={12} y1={4} x2={12} y2={14} />
-              <line x1={12} y1={18} x2={12} y2={20} />
-              <circle cx={18} cy={7} r={2} />
-              <line x1={18} y1={4} x2={18} y2={5} />
-              <line x1={18} y1={9} x2={18} y2={20} />
-            </svg>
+            <ArrowLeft
+              className={`transform ${
+                showSideBar ? 'rotate-45' : 'rotate-225'
+              }`}
+            />
           </div>
           <div className="px-8"></div>
         </div>
