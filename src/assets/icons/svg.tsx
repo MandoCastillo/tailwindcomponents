@@ -8,8 +8,6 @@ export interface IconProps {
 
 export const Loading: FC<IconProps> = ({ className }) => (
   <svg
-    // width="20"
-    // height="20"
     fill="currentColor"
     className={`${className} ${height}`}
     viewBox="0 0 1792 1792"
@@ -33,7 +31,7 @@ export const Plus: FC<IconProps> = ({ className }) => (
 export const ArrowLeft: FC<IconProps> = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`${className} ${height}`}
+    className={`${height} ${className} `}
     viewBox="0 0 20 20"
     fill="currentColor"
   >
@@ -42,5 +40,38 @@ export const ArrowLeft: FC<IconProps> = ({ className }) => (
       d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
       clipRule="evenodd"
     />
+  </svg>
+);
+
+export const AcademicCap: FC<IconProps> = ({ className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className={`${className} ${height}`}
+    viewBox="0 0 20 20"
+    fill="currentColor"
+  >
+    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+  </svg>
+);
+
+export const MenuHamburger: FC<IconProps> = ({ className }) => (
+  <svg
+    className={`${className} ${height}`}
+    fill="currentColor"
+    viewBox="0 0 1792 1792"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"></path>
+  </svg>
+);
+
+export const Chain: FC<IconProps> = ({ className }) => (
+  <svg
+    className={`${className} ${height}`}
+    fill="currentColor"
+    viewBox="0 0 1792 1792"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z"></path>
   </svg>
 );

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ArrowLeft, Plus } from '../assets/icons/svg';
 import { useScreen } from '../hooks/useScreen';
 import { Button } from './Button';
+import { Menu } from './Menu';
 
 export const Sidebar = () => {
   const [showSideBar, setShowSideBar] = useState<boolean>(true);
@@ -13,12 +14,10 @@ export const Sidebar = () => {
   };
 
   return (
-    <div className="flex flex-no-wrap">
+    <div className="flex flex-no-wrap text-white">
       {width > 640 ? (
-        <div
-          className={`w-64 absolute sm:relative bg-gray-800 hidden shadow h-screen flex-col justify-between sm:flex`}
-        >
-          <div className="px-8">asd</div>
+        <div className="w-64 absolute sm:relative bg-gray-800 hidden shadow h-screen flex-col justify-between sm:flex">
+          <Menu />
         </div>
       ) : (
         <div
@@ -35,15 +34,15 @@ export const Sidebar = () => {
             onClick={sidebarHandler}
           >
             <ArrowLeft
-              className={`transform ${
+              className={`transform text-gray-800 ${
                 showSideBar ? 'rotate-45' : 'rotate-225'
               }`}
             />
           </div>
-          <div className="px-8"></div>
+          <Menu />
         </div>
       )}
-      <div className="container mx-auto py-10 md:w-4/5 w-11/12">
+      <div className="container py-10 mx-4 sm:mx-4 md:mx-6 lg:mx-8">
         {/* {isLoading && <p>Cargando...</p>} */}
         <Button
           text="Agregar"
